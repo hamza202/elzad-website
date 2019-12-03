@@ -127,11 +127,13 @@ a {
     transform: scale(1.15, 1.15); }
 
 .my-btn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
   position: relative;
   border: 0;
   border-radius: 5px;
   outline: none;
-  display: inline-block;
   text-align: center;
   cursor: pointer;
   color: #fff;

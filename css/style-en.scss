@@ -13,6 +13,7 @@ $grayColor: #F5F5F5;
 @import url('https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap');
 body {
   font-family: 'Tajawal', sans-serif;
+
 }
 
 $color-map: (
@@ -172,11 +173,13 @@ a {
 
 %my-btn {
   @extend %transition3;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
   position: relative;
   border: 0;
   border-radius: 5px;
   outline: none;
-  display: inline-block;
   text-align: center;
   cursor: pointer;
   color: #fff;
