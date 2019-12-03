@@ -78,7 +78,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
+$(window).load(function() {
     $(".loading-overly").fadeOut(1500,
         function () {
             $(this).remove();
