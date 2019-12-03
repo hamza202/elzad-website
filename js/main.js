@@ -78,3 +78,10 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $(".loading-overly").fadeOut(1500,
+        function () {
+            $(this).remove();
+            $('body').removeClass('overflow-hidden')
+        });
+});
