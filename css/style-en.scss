@@ -13,6 +13,7 @@ $grayColor: #F5F5F5;
 @import url('https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap');
 body {
   font-family: 'Tajawal', sans-serif;
+  line-height: 1;
 }
 
 $color-map: (
@@ -180,7 +181,7 @@ a {
   text-align: center;
   cursor: pointer;
   color: #fff;
-  padding: 9px 20px 10px 20px;
+  padding: 12px 20px 12px 20px;
   font-weight: 600;
 
   &:focus, &:visited {
@@ -402,6 +403,7 @@ header {
     background-color: $grayColor;
     border-radius: 5px;
     padding-left: 50px;
+    line-height: 40px;
     outline: 0;
     border: 1px solid transparent;
     @extend %transition3;
@@ -628,6 +630,8 @@ header {
       background-color: transparent;
       color: $pinkColor;
       padding: 0;
+      margin-top: 3px;
+      padding-bottom: 1px;
       @extend %transition3, %line-hover;
       cursor: pointer;
     }
@@ -674,6 +678,7 @@ header {
       border: 0;
       text-align: center;
       border-radius: 5px;
+      height: 26px;
     }
   }
 }
@@ -716,7 +721,7 @@ header {
   .footer-social {
     p{
       color: white;
-      margin-bottom: 5px;
+      margin-bottom: 9px;
     }
     ul{
       li{

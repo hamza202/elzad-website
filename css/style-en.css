@@ -5,7 +5,8 @@
 @import url(animate.css);
 @import url("https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap");
 body {
-  font-family: 'Tajawal', sans-serif; }
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1; }
 
 .greenColor-bg {
   background: #7FAE00; }
@@ -135,7 +136,7 @@ a {
   text-align: center;
   cursor: pointer;
   color: #fff;
-  padding: 9px 20px 10px 20px;
+  padding: 12px 20px 12px 20px;
   font-weight: 600; }
   .my-btn:focus, .my-btn:visited {
     outline: none; }
@@ -269,6 +270,7 @@ header .navbar {
     background-color: #F5F5F5;
     border-radius: 5px;
     padding-left: 50px;
+    line-height: 40px;
     outline: 0;
     border: 1px solid transparent; }
     .search-container input:focus {
@@ -420,6 +422,8 @@ header .navbar {
     background-color: transparent;
     color: #B91F68;
     padding: 0;
+    margin-top: 3px;
+    padding-bottom: 1px;
     cursor: pointer; }
   .product-container .add-cart-container .resizeInput {
     background-color: transparent;
@@ -452,7 +456,8 @@ header .navbar {
       color: #fff;
       border: 0;
       text-align: center;
-      border-radius: 5px; }
+      border-radius: 5px;
+      height: 26px; }
 
 .product-container:before {
   content: "";
@@ -480,7 +485,7 @@ header .navbar {
     top: 8px; }
   .footer .footer-social p {
     color: white;
-    margin-bottom: 5px; }
+    margin-bottom: 9px; }
   .footer .footer-social ul li a {
     color: #fff;
     display: flex;
