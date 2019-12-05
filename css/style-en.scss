@@ -8,12 +8,13 @@ $grayColor: #F5F5F5;
 @import "fontawesome-all.css";
 @import "slick.css";
 @import "slick-theme.css";
-@import "animate.css";
+//@import "animate.css";
+@import "datepicker.min.css";
 //@import "sweetalert2.min.css";
 @import url('https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap');
 body {
   font-family: 'Tajawal', sans-serif;
-
+  font-weight: 500;
 }
 
 $color-map: (
@@ -27,6 +28,12 @@ $color-map: (
   }
   .#{$name}-color {
     color: $color;
+  }
+}
+
+@for $j from 10 to 31 {
+  .fs-#{$j} {
+    font-size: $j+px;
   }
 }
 
@@ -249,6 +256,10 @@ a {
 }
 
 //Classes
+hr {
+  border-top-color: rgba(0, 0, 0, 0.27);
+}
+
 .scale-hover {
   @extend %scale-hover
 }
@@ -323,13 +334,14 @@ a {
 //NavBar
 header {
   .navbar {
-    .navbar-collapse{
-      .row{
+    .navbar-collapse {
+      .row {
 
       }
     }
+
     background-color: white;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       padding-top: 20px;
     }
     padding-bottom: 0;
@@ -339,8 +351,8 @@ header {
 
       img {
         max-width: 160px;
-        @include media-breakpoint-down(lg){
-         max-width: 120px;
+        @include media-breakpoint-down(lg) {
+          max-width: 120px;
         }
         height: auto;
       }
@@ -712,18 +724,21 @@ header {
 
 .footer {
   background-color: $greenColor;
-  .footer-logo{
+
+  .footer-logo {
     position: relative;
     top: 8px;
   }
+
   .footer-social {
-    p{
+    p {
       color: white;
       margin-bottom: 5px;
     }
-    ul{
-      li{
-        a{
+
+    ul {
+      li {
+        a {
           color: #fff;
           display: flex;
           justify-content: center;
@@ -735,7 +750,8 @@ header {
           font-size: 19px;
 
           background-color: transparent;
-          &:hover{
+
+          &:hover {
             background-color: $pinkColor;
           }
 
@@ -743,10 +759,142 @@ header {
       }
     }
   }
-  .footer-list{
-    a{
+
+  .footer-list {
+    a {
       color: #fff;
       @extend %line-hover;
+    }
+  }
+}
+
+.signup-tab {
+  .nav-item {
+
+    a.nav-link {
+      border: 1px solid #636363;
+      color: #000;
+      font-size: 17px;
+
+      &.active {
+        background-color: transparent;
+        color: #000;
+        border-color: $pinkColor;
+      }
+    }
+  }
+}
+
+.form-control {
+  &:focus {
+    border-color: $greenColor;
+  }
+}
+
+.form-container {
+  .form-group {
+    margin-bottom: 0.70rem;
+  }
+
+  .custom-checkbox {
+    position: relative;
+    margin-bottom: 15px;
+
+    label.error {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      margin: 0;
+    }
+  }
+}
+
+.input-group {
+  position: relative;
+
+  label.error {
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    margin: 0;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+label.error {
+  color: red;
+  margin-bottom: 0;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: $greenColor;
+  background-color: $greenColor;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba($greenColor, .25);
+}
+
+.my-radio {
+  margin-top: 32px;
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+    border: 2px solid #616161;
+    color: #000;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    @extend %transition3;
+  }
+
+  input:checked + label {
+    border-color: $pinkColor;
+  }
+}
+
+.green-link {
+  color: $greenColor;
+  @extend %line-hover;
+
+  &:hover {
+    color: $greenColor;
+  }
+}
+.green-list-steps{
+  li{
+    margin-bottom: 10px;
+    padding-left: 23px;
+    position: relative;
+    font-size: 17px;
+    &:before{
+      content: '';
+      width: 15px;
+      height: 15px;
+      display: block;
+      position: absolute;
+      background-color: $greenColor;
+      border-radius: 5px;
+      left: 0;
+      top: 5px;
+      box-shadow: 0 .125rem .25rem rgba(0,0,0,.40);
     }
   }
 }

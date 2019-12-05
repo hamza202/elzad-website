@@ -2,10 +2,11 @@
 @import url(fontawesome-all.css);
 @import url(slick.css);
 @import url(slick-theme.css);
-@import url(animate.css);
+@import url(datepicker.min.css);
 @import url("https://fonts.googleapis.com/css?family=Tajawal:400,500,700,800,900&display=swap");
 body {
-  font-family: 'Tajawal', sans-serif; }
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500; }
 
 .greenColor-bg {
   background: #7FAE00; }
@@ -24,6 +25,69 @@ body {
 
 .grayColor-color {
   color: #F5F5F5; }
+
+.fs-10 {
+  font-size: 10px; }
+
+.fs-11 {
+  font-size: 11px; }
+
+.fs-12 {
+  font-size: 12px; }
+
+.fs-13 {
+  font-size: 13px; }
+
+.fs-14 {
+  font-size: 14px; }
+
+.fs-15 {
+  font-size: 15px; }
+
+.fs-16 {
+  font-size: 16px; }
+
+.fs-17 {
+  font-size: 17px; }
+
+.fs-18 {
+  font-size: 18px; }
+
+.fs-19 {
+  font-size: 19px; }
+
+.fs-20 {
+  font-size: 20px; }
+
+.fs-21 {
+  font-size: 21px; }
+
+.fs-22 {
+  font-size: 22px; }
+
+.fs-23 {
+  font-size: 23px; }
+
+.fs-24 {
+  font-size: 24px; }
+
+.fs-25 {
+  font-size: 25px; }
+
+.fs-26 {
+  font-size: 26px; }
+
+.fs-27 {
+  font-size: 27px; }
+
+.fs-28 {
+  font-size: 28px; }
+
+.fs-29 {
+  font-size: 29px; }
+
+.fs-30 {
+  font-size: 30px; }
 
 .loading-overly {
   position: fixed;
@@ -150,15 +214,15 @@ a {
   -o-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s; }
 
-a, .my-btn, .product-container .add-cart-container button.add-to-cart-btn:before, .footer .footer-list a:before, header .navbar .navbar-nav li a.nav-link:before, .search-container input, .slider .slider-nav .slick-slide img, .product-container .add-cart-container button.add-to-cart-btn, .product-container:before {
+a, .my-btn, .product-container .add-cart-container button.add-to-cart-btn:before, .footer .footer-list a:before, .green-link:before, header .navbar .navbar-nav li a.nav-link:before, .search-container input, .slider .slider-nav .slick-slide img, .product-container .add-cart-container button.add-to-cart-btn, .product-container:before, .my-radio label {
   -webkit-transition: all ease-in-out 0.3s;
   -moz-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s; }
 
-.product-container .add-cart-container button.add-to-cart-btn, .footer .footer-list a {
+.product-container .add-cart-container button.add-to-cart-btn, .footer .footer-list a, .green-link {
   position: relative; }
-  .product-container .add-cart-container button.add-to-cart-btn:before, .footer .footer-list a:before {
+  .product-container .add-cart-container button.add-to-cart-btn:before, .footer .footer-list a:before, .green-link:before {
     content: '';
     position: absolute;
     left: 0;
@@ -166,8 +230,11 @@ a, .my-btn, .product-container .add-cart-container button.add-to-cart-btn:before
     height: 2px;
     width: 0;
     background-color: #B91F68; }
-  .product-container .add-cart-container button.add-to-cart-btn:hover:before, .footer .footer-list a:hover:before {
+  .product-container .add-cart-container button.add-to-cart-btn:hover:before, .footer .footer-list a:hover:before, .green-link:hover:before {
     width: 100%; }
+
+hr {
+  border-top-color: rgba(0, 0, 0, 0.27); }
 
 .fs-13 {
   font-size: 13px; }
@@ -498,5 +565,95 @@ header .navbar {
       background-color: #B91F68; }
   .footer .footer-list a {
     color: #fff; }
+
+.signup-tab .nav-item a.nav-link {
+  border: 1px solid #636363;
+  color: #000;
+  font-size: 17px; }
+  .signup-tab .nav-item a.nav-link.active {
+    background-color: transparent;
+    color: #000;
+    border-color: #B91F68; }
+
+.form-control:focus {
+  border-color: #7FAE00; }
+
+.form-container .form-group {
+  margin-bottom: 0.70rem; }
+.form-container .custom-checkbox {
+  position: relative;
+  margin-bottom: 15px; }
+  .form-container .custom-checkbox label.error {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    margin: 0; }
+
+.input-group {
+  position: relative; }
+  .input-group label.error {
+    position: absolute;
+    bottom: -21px;
+    left: 0;
+    margin: 0; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield; }
+
+label.error {
+  color: red;
+  margin-bottom: 0; }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #7FAE00;
+  background-color: #7FAE00; }
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(127, 174, 0, 0.25); }
+
+.my-radio {
+  margin-top: 32px; }
+  .my-radio input {
+    display: none; }
+  .my-radio label {
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+    border: 2px solid #616161;
+    color: #000;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer; }
+  .my-radio input:checked + label {
+    border-color: #B91F68; }
+
+.green-link {
+  color: #7FAE00; }
+  .green-link:hover {
+    color: #7FAE00; }
+
+.green-list-steps li {
+  margin-bottom: 10px;
+  padding-left: 23px;
+  position: relative;
+  font-size: 17px; }
+  .green-list-steps li:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    background-color: #7FAE00;
+    border-radius: 5px;
+    left: 0;
+    top: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4); }
 
 /*# sourceMappingURL=style-en.css.map */

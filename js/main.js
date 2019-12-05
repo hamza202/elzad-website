@@ -44,11 +44,13 @@ $('.slider-nav').slick({
 
 //input width auto
 $(document).ready(function () {
-    var resizeInput = $('input.resizeInput')
-    resizeInput.width(resizeInput.val().length + "ch");
-    resizeInput.on('input',function () {
-        $(this).width($(this).val().length + "ch");
-    });
+    var resizeInput = $('input.resizeInput');
+    if($('.add-cart-container input').hasClass('resizeInput')){
+        resizeInput.width(resizeInput.val().length + "ch");
+        resizeInput.on('input', function () {
+            $(this).width($(this).val().length + "ch");
+        });
+    }
      // get the input element
 
 });
@@ -85,3 +87,48 @@ $(window).load(function() {
             $('body').removeClass('overflow-hidden')
         });
 });
+//validation
+$("#i_form").validate({
+    rules: {
+        customCheck1: 'required',
+        customCheck2: 'required',
+        customCheck3: 'required',
+        i_password: "required",
+        i_c_password: {
+            equalTo: "#password"
+        }
+    },
+    messages: {
+        customCheck1: 'You must agree to the terms',
+        customCheck2: 'You must agree to the terms',
+        customCheck3: 'You must agree to the terms',
+        i_c_password: {
+            equalTo: "Password does not match."
+        }
+    }
+});
+$("#p_form").validate({
+    rules: {
+        customCheck4: 'required',
+        customCheck5: 'required',
+        customCheck6: 'required',
+        p_password: "required",
+        p_c_password: {
+            equalTo: "#password"
+        }
+    },
+    messages: {
+        customCheck4: 'You must agree to the terms',
+        customCheck5: 'You must agree to the terms',
+        customCheck6: 'You must agree to the terms',
+        p_c_password: {
+            equalTo: "Password does not match."
+        }
+    }
+});
+$('#login_form').validate({});
+$('#contact_form').validate({});
+$('#card_form').validate({});
+
+//datepicker
+$('[data-toggle="datepicker"]').datepicker();
