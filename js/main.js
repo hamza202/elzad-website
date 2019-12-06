@@ -42,10 +42,51 @@ $('.slider-nav').slick({
     ]
 });
 
+$('.slider-for2').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav2'
+});
+$('.slider-nav2').slick({
+    slidesToScroll: 2,
+    asNavFor: '.slider-for2',
+    dots: false,
+    slidesToShow: 3,
+    centerMode: false,
+    focusOnSelect: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+
+    ]
+});
 //input width auto
 $(document).ready(function () {
     var resizeInput = $('input.resizeInput');
-    if($('.add-cart-container input').hasClass('resizeInput')){
+    if($('input').hasClass('resizeInput')){
         resizeInput.width(resizeInput.val().length + "ch");
         resizeInput.on('input', function () {
             $(this).width($(this).val().length + "ch");
